@@ -5,7 +5,8 @@ This repository contains my report on **Nonlinear Dynamics** and its
 corresponding files for *Summer of Science* conducted by *Maths and Physics Club
 IIT Bombay*.
 
-### Introduction
+Introduction
+------------
 
 Nonlinear Dynamics and Chaos is a blend of applied mathematics and physical
 modelling, spreading across scientific disciplines like a spider's intricate
