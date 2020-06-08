@@ -1,0 +1,18 @@
+Starting with two initial values of $x_0$ and $x_0+\delta_0$ we perform $n$ iterations of the map
+\begin{equation}
+	\begin{aligned}
+		x_n&=f^{(n)}(x_0)\\
+		x_n+\delta_n&=f^{(n)}(x_0+\delta_0)
+	\end{aligned}\quad\rightarrow\quad
+	\delta_n=f^{(n)}(x_0+\delta_0)-f^{(n)}(x_0)
+\end{equation}
+where $f^{(n)}$ in the $n^{th}$ iterate of $f$.
+The Lyapunov exponent $\lambda$ is defined by
+\begin{equation}
+	|\delta_n|=|\delta_0|e^{n\lambda}\quad\rightarrow\quad
+	\lambda=\frac{1}{n}\ln\left|\frac{\delta_n}{\delta_0}\right|\quad\rightarrow\quad\lambda=\frac{1}{n}\ln\left|\frac{f^{(n)}(x_0+\delta_0)-f^{(n)}(x_0)}{\delta_0}\right|
+\end{equation}
+which in the limit $\delta_0\rightarrow0$ can be written as
+\begin{equation}
+	\lambda=\frac{1}{n}\ln|f^{(n)\prime}(x_0)|\quad\text{using chain rule}\quad\lambda=\frac{1}{n}\ln\left|\prod_{i=0}^{n-1}f^\prime(x_i)\right|=\frac{1}{n}\sum_{i=0}^{n-1}\ln|f^\prime(x_i)|
+\end{equation}

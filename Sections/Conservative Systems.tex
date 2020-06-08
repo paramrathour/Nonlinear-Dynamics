@@ -1,0 +1,18 @@
+Systems for which a conserved quantity exists are called \textbf{conservative systems}.\\\\
+Given a system $\mathbf{\dot{x}}=\mathbf{f}(\mathbf{x})$, a conserved quantity is a real-valued continuous function $E(\mathbf{x})$ that is constant on trajectories, i.e. $\dfrac{dE}{dt}=0$ and $E(\mathbf{x})$ be nonconstant on every open set.
+\begin{theorem}
+	A conservative system cannot have any attracting fixed points.
+\end{theorem}
+\begin{proof}
+	Suppose $\mathbf{\tilde{x}}$ were an attracting fixed point.
+	Then all points in its basin of attraction would have to be at the same energy $E(\mathbf{\tilde{x}}$) (because energy is constant on trajectories and all trajectories in the basin flow to $\mathbf{\tilde{x}}$).
+	Hence $E(\mathbf{x})$ must be a constant function for $\mathbf{x}$ in the basin.
+	But this contradicts our definition of a conservative system, in which we required that $E(\mathbf{x})$ be nonconstant on all open sets.
+\end{proof}
+\subsection*{Nonlinear Centers}
+Centers are ordinarily very delicate (See Section (\ref{sec:eosnt})), they are much more robust when the system is conservative.
+\begin{theorem}[\textbf{Nonlinear centers for conservative systems}]
+	Consider the system $\mathbf{\dot{x}}=\mathbf{f}(\mathbf{x})$, and $\mathbf{f}$ is continuously differentiable.
+	Suppose there exists a conserved quantity $E(\mathbf{x})$ and suppose that $\mathbf{\tilde{x}}$ is an isolated fixed point (i.e., there are no other fixed points in a small neighborhood surrounding $\mathbf{\tilde{x}}$).
+	If $\mathbf{\tilde{x}}$ is a local minimum of $E$, then all trajectories sufficiently close to $\mathbf{\tilde{x}}$ are closed.
+\end{theorem}

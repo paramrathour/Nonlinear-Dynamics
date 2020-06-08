@@ -1,0 +1,244 @@
+\documentclass[a4paper]{article}
+
+\usepackage[backend=bibtex]{biblatex}
+%\usepackage[backend=bibtex,style=verbose-trad2]{biblatex}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, mathtools}
+\usepackage{gensymb}
+\usepackage{lipsum}
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {./Images/images1D/}{./Images/images2D/}{./Images/imagesHD/}{./Images/imagesModelling/}{./Images/imagesDDS/}{./Images/imagesCF/}{./Images/imagesSS/} }
+\usepackage{wrapfig}
+
+\usepackage{subcaption}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\usepackage{anyfontsize}
+\usepackage{tocloft}
+\usepackage{geometry}
+\geometry{
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm,
+}
+%\usepackage[DIV=15]{typearea}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\lhead{\textsc{Nonlinear Dynamics}}
+%\rhead{\textsc{-Param Rathour}}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{comment}
+\usepackage{hyperref}
+\hypersetup{
+	linktoc=all,     %set to all if you want both sections and subsections linked
+	urlcolor=blue,
+	pdftitle={Nonlinear Dynamics},
+    pdfauthor = {Param Rathour, Department of Electrical Engineering, Indian Institute of Technology Bombay},
+    pdfsubject={Summer of Science 2020, Maths and Physics Club IIT Bombay},
+    pdfkeywords={One Dimensional Systems, Two Dimensional Systems, Higher Dimensional Systems, Discrete Dynamical Systems, Stochastic Systems, Mathematical Modelling, Linearization, Stability, Lyapunov Stability, Basin of Attraction, Bifurcations, Saddle-Node Bifurcation, Transcritical Bifurcation, Supercritical Pitchfork Bifurcation, Subcritical Pitchfork Bifurcation, Infinite-Period Bifurcation, Homoclinic Bifurcation, Heteroclinic Bifurcation, Potential Function, Lyapunov Function, Index Theory, Conservative Systems, Reversible Systems, Limit Cycles, Poincaré-Bendixson Theorem, Lyapunov Exponents, Lorenz System, Lorenz Equation, Strange Attractor, Lorenz Attractor, Rössler System, Rössler Attractor, Recurrence Relations, Logistic Map, Hénon Map, Hénon Attractor, Chaos, Chaos Game, Fractals, Fractal Dimension, Hausdorff index, Cantor Set, Koch Curve, Sierpinski Triangle, Barnsley Fern, Julia Sets, Mandelbrot Set, Newton Fractal, Universality, Sharkovsky Ordering, Sharkovsky Theorem, Feigenbaum Constants, Langevin Equations, Brownian Motion, Colors of Noise, Fokker-Planck Equation, Population Models, Logistic Growth, Competing Species, Lotka-Volterra Model, SIR Model, SEIR Model, Nonuniform Oscillator, Harmonic Oscillator, Nonlinear Oscillators, Liénard System, Van-der-Pol Oscillator, Rayleigh Oscillator}
+}
+
+\usepackage{quoting,xparse}
+\NewDocumentCommand{\bywhom}{m}{% the Bourbaki trick
+  {\nobreak\hfill\penalty50\hskip1em\null\nobreak
+   \hfill\mbox{\normalfont(#1)}%
+   \parfillskip=0pt \finalhyphendemerits=0 \par}%
+}
+\NewDocumentEnvironment{pquotation}{m}
+  {
+  \begin{quoting}[
+     indentfirst=true,
+     leftmargin=\parindent,
+     rightmargin=\parindent]\itshape}
+  {\bywhom{#1}
+  \end{quoting}
+  }
+
+\usepackage{etoolbox}
+\patchcmd{\abstract}{\titlepage}{}{}{}
+\patchcmd{\endabstract}{\endtitlepage}{}{}{}
+
+\renewcommand{\cftaftertoctitle}{\\\rule{\linewidth}{1pt}\vspace*{3ex}}
+\newcommand\at[2]{\left.#1\right|_{#2}}
+\renewcommand\qedsymbol{$\blacksquare$}
+\newcommand{\tani}{\tan^{-1}}
+\newcommand{\sini}{\sin^{-1}}
+\newcommand{\cosi}{\cos^{-1}}
+\renewcommand{\vline}{\unskip\ \vrule\ }
+
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+\newtheorem{theorem}{Theorem}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\bibliography{References}
+
+\title{\textbf{\textsc{Nonlinear Dynamics}} \\ \Large{Summer of Science Midterm Report}}
+\date{April, 2020}
+\author{\textbf{{Param Rathour}}\\190070049\\Department of Electrical Engineering\\Indian Institute of Technology Bombay\\ \\ Mentor Name: Athul}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+%\maketitle
+\input{Sections/Cover}
+
+\newpage
+\begin{titlepage}
+	\null\vspace{\fill}
+	\input{Sections/Abstract}
+	\vspace{\fill}
+	\renewcommand{\abstractname}{Acknowledgements}
+	\input{Sections/Acknowledgements}
+	\vspace{\fill}
+\end{titlepage}
+
+\newpage
+\pagenumbering{roman}
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+
+\section{Introduction}
+\input{Sections/Introduction} 
+
+\newpage
+\part{One Dimensional Systems}
+
+\section{Flows}
+\input{Sections/Flows}
+
+\section{Bifurcations}
+\input{Sections/Bifurcations 1-D}
+
+\newpage
+\part{Two Dimensional Systems}
+\input{Sections/Introduction Two Dimensional Systems}
+
+\section{Linear Systems}
+\input{Sections/Linear Systems}
+
+\section{Nonlinear Systems}
+\input{Sections/Nonlinear Systems}
+
+\section{Conservative Systems}
+\input{Sections/Conservative Systems}
+
+\section{Reversible Systems}
+\input{Sections/Reversible Systems}
+
+\section{Limit Cycles}{\label{sec:lc}}
+\input{Sections/Limit Cycles}
+
+\section{Nonlinear Oscillators}
+\input{Sections/Nonlinear Oscillators}
+
+\section{Bifurcations}{\label{sec:bf2d}}
+\input{Sections/Bifurcations 2-D}
+
+\newpage
+\part{Higher Dimensional Systems}
+\input{Sections/Introduction Higher Dimensional Systems}
+
+\section{Three Dimensional Systems}
+\input{Sections/Three Dimensional Systems}
+
+\section{Lyapunov Exponents For Continous Systems}
+\input{Sections/Lyapunov Exponents For Continous Systems}
+
+\newpage
+\part{Discrete Dynamical Systems}
+
+\section{Linear Discrete Systems}
+\input{Sections/Linear Discrete Systems }
+
+\section{Analysis}{\label{sec:dds}}
+\input{Sections/Analysis}
+
+\section{Logistic Map}{\label{sec:lm}}
+\input{Sections/Logistic Map}
+
+\section{H\'enon Map}{\label{sec:hm}}
+\input{Sections/Hénon Map}
+
+\section{Universality}
+\input{Sections/Universality}
+
+\section{Feigenbaum Constants}
+\input{Sections/Feigenbaum Constants}
+
+\section{Lyapunov Exponents for Discrete Systems}{\label{sec:ledds}}
+\input{Sections/Lyapunov Exponents for Discrete Systems}
+
+\newpage
+\part{Chaos and Fractals}
+
+\section{Chaos}
+\input{Sections/Chaos}
+
+\section{Fractals}
+\input{Sections/Fractals}
+
+\newpage
+\part{Stochastic Systems}
+\input{Sections/Introduction Stochastic Systems}
+
+\section{Langevin Equations}
+\input{Sections/Langevin Equations}
+
+\section{Features}
+\input{Sections/Features}
+
+\section{Fokker-Planck Equation}
+\input{Sections/Fokker-Planck Equation}
+
+\newpage
+\part{Modelling Nonlinear Systems}
+
+\section{The Pendulum}
+\subsection{The Free Pendulum}
+\input{Sections/The Free Pendulum}
+
+\subsection{The Forced Pendulum}
+\input{Sections/The Forced Pendulum}
+
+\section{Population Models}
+\input{Sections/Introduction to Population Models}
+
+\subsection{Logistic Growth}
+\input{Sections/Logistic Growth}
+
+\subsection{Competing Species}
+\input{Sections/Competing Species}
+
+\subsection{Predator-Prey Models}
+\input{Sections/Predator-Prey Models}
+
+\subsection{Spread of Disease}
+\input{Sections/Spread of Disease}
+
+\begin{appendix}
+	\nocite{*}
+	\begin{comment}
+	\newpage
+	\listoffigures
+	\listoftables
+	\end{comment}
+	\printbibliography[
+	heading=bibintoc,
+	title={References}
+	]
+	%\addcontentsline{toc}{section}{Plan of Action}
+\end{appendix}
+\end{document}

@@ -1,0 +1,37 @@
+\begin{pquotation}{\textsc{Bertrand Russell}, Study of Mathematics}
+``Mathematics, rightly viewed, possesses not only truth, but supreme beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show.
+The true spirit of delight, the exaltation, the sense of being more than Man, which is the touchstone of the highest excellence, is to be found in mathematics as surely as in poetry.''
+\end{pquotation}
+Nonlinear dynamics is the study of systems that are described by nonlinear equations of motion.
+The knowledge of nonlinear dynamics is based on the notion of a \textbf{dynamical system}.
+The concept of a dynamical system has its origins in Newtonian mechanics.
+A dynamical system may be thought of as an object of any nature, whose state evolves in time according to some dynamical law, i.e., as a result of the action of a evolution operator.
+If the changes are determined by specific rules, rather than being random, we say that the system is \textbf{deterministic}; otherwise it is \textbf{stochastic}.
+The evolution rule of dynamical systems is an implicit relation that gives the state of the system for only a short time into the future.
+The relation is either a differential equation, difference equation or other time scale.
+To determine the state for all future times requires iterating the relation many times, each advancing time a small step.
+The iteration procedure is referred to as solving the system or integrating the system.
+If the system can be solved, given an initial point it is possible to determine all its future positions, a collection of points known as a {\textbf{trajectory}}.\\\\
+There are two main types of dynamical systems: differential equations and iterated maps (also known as difference equations).
+Differential equations describe the evolution of systems in continuous time, whereas iterated maps arise in problems where time is discrete.
+Differential equations are used much more widely in science and engineering, and we shall therefore concentrate on them.\\
+A very general framework for ordinary differential equations is provided by the system
+\begin{equation}{\label{eq:gode}}
+	\begin{aligned}
+		\dot{x_1}&=f_1(x_1,\ldots,x_n)\\
+		\vdots& \\
+		\dot{x_n}&=f_n(x_1,\ldots,x_n)
+	\end{aligned}
+\end{equation}
+Here the overdots denote differentiation with respect to $t$.
+Thus $\dot{x_i}\equiv dx_i/dt$.
+The variables $x_1,\ldots, x_n$ might represent concentrations of chemicals in a reactor, populations of different species in an ecosystem, or the positions and velocities of the planets in the solar system.
+The functions $f_1,\ldots, f_n$ are determined by the problem at hand.
+The system is said to be {\textbf{linear}} when all the $x_i$ on the right-hand side in (\ref{eq:gode}) appear to the first power only.
+Otherwise the system would be {\textbf{nonlinear}}.
+Typical nonlinear terms are products, powers, and functions of the $x_i$.
+\subsection{Limitations of Linear Systems}
+The analysis of linear systems is possible because they satisfy superposition principle: if $\mathbf{x_1}$and $\mathbf{x_2}$ satisfy the differential equation for the vector field $(x_1,\ldots, x_n)$ then so will $c_1\mathbf{x_1}+c_2\mathbf{x_2}$.
+The superposition principle fails when dealing with nonlinear systems.\\
+As we will see later, linear systems are extremely restricted in their dynamical behavior, i.e. exponential increase, decrease or constant, and cannot provide adequate models for most of the phenomena we observe in nature.
+In contrast, nonlinear systems cannot be decoupled, more complex dynamical behavior arises, and in these cases the whole is more than just the sum of its parts.

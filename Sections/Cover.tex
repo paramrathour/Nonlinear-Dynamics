@@ -1,0 +1,70 @@
+\begin{tikzpicture}[overlay,remember picture]
+	\fill[white] (current page.south west) rectangle (current page.north east);
+
+	\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(-.5,-6)$)}}]
+
+		\shade[rounded corners=18pt, left color=Dandelion, right color=Dandelion!40] ($(current page.north west)+(-.5,-6)$) rectangle ++(9,1.5);
+
+	\end{scope}
+
+	\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}]
+
+		\shade[rounded corners=18pt, left color=lightgray,right color=lightgray!60] ($(current page.north west)+(0.5,-10)$) rectangle ++(15,1.5);
+
+	\end{scope}
+
+	\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(0.5,-10)$)}}]
+
+		\shade[rounded corners=8pt, left color=lightgray] ($(current page.north west)+(1.5,-9.55)$) rectangle ++(7,.6);
+
+	\end{scope}
+
+	\begin{scope}[transform canvas ={rotate around ={45:($(current page.north)+(-1.5,-3)$)}}]
+
+		\shade[rounded corners=12pt, left color=orange!80, right color=orange!60] ($(current page.north)+(-1.5,-3)$) rectangle ++(9,0.8);
+
+	\end{scope}
+
+	\begin{scope}[transform canvas ={rotate around ={45:($(current page.north)+(-3,-8)$)}}]
+
+		\shade[rounded corners=28pt, left color=red!80, right color=red!80] ($(current page.north)+(-3,-8)$) rectangle ++(15,1.8);
+
+	\end{scope}
+
+	\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(4,-15.5)$)}}]
+
+		\shade[rounded corners=25pt, left color=orange, right color=Dandelion] ($(current page.north west)+(4,-15.5)$) rectangle ++(30,1.8);
+
+	\end{scope}
+
+	\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(13,-10)$)}},]
+
+		\shade[rounded corners=22pt, left color=RoyalBlue,right color=Emerald] ($(current page.north west)+(13,-10)$) rectangle ++(15,1.5);
+
+	\end{scope}
+
+	\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(18,-8)$)}},]
+
+		\shade[rounded corners=8pt, left color=lightgray] ($(current page.north west)+(18,-8)$) rectangle ++(15,0.6);
+
+	\end{scope}
+
+	\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(19,-5.65)$)}},]
+
+		\shade[rounded corners=12pt, left color=lightgray] ($(current page.north west)+(19,-5.65)$) rectangle ++(15,0.8);
+
+	\end{scope}
+
+	\begin{scope}[transform canvas ={rotate around ={45:($(current page.north west)+(20,-9)$)}}]
+
+		\shade[rounded corners=20pt, left color=OrangeRed, right color=red!80] ($(current page.north west)+(20,-9)$) rectangle ++(14,1.2);
+
+	\end{scope}
+
+		\draw[ultra thick,gray] ($(current page.center)+(5,2)$) -- ++(0,-3cm) node[midway,left=0.25cm,text width=5cm,align=right,black!75]{{\fontsize{20}{30} \selectfont \bf \textsc{Endterm} \\[10pt] \textsc{Report}}} node[midway,right=0.25cm,text width=6cm,align=left,orange]{{\fontsize{30}{86.4} \selectfont \bf SOS 2020}};
+
+		\node at ($(current page.center)+(0,-4)$) {{\fontsize{35}{72} \selectfont \textbf{\textsc{Nonlinear Dynamics}}}};
+
+		\node[text width=10cm,align=center] at ($(current page.center)+(0,-6.5)$) {{\fontsize{20}{19.2} 
+		\selectfont \textcolor{black} {\textbf{{\\[50pt]Param Rathour}}}} \Large{\\[4pt]190070049\\[4pt]Department of Electrical Engineering\\Indian Institute of Technology Bombay\\[15pt] Mentor Name: Athul}};
+\end{tikzpicture}

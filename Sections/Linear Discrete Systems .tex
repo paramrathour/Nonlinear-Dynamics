@@ -1,0 +1,57 @@
+Time-discrete maps are useful to study in order to understand the complexity that can originate from simple iterative procedures.
+Maps are much easier to implement numerically than differential equations and exhibit an incredible richness of complex structures.
+These systems are known variously as difference equations, recursion relations, iterated maps, or simply maps.
+In general, a discrete map is given by
+\begin{equation}
+	\mathbf{x}_{n+1}=\mathbf{f}(\mathbf{x}_n)
+\end{equation}
+where $\mathbf{x}$ and $\mathbf{f}$ are $m-$dimensional vectors.\\
+The sequence $x_0,x_1,x_2,\ldots$ is called the {\textbf{orbit}} starting from $x_0$.\\\\
+\textbf{Fixed points} occur when $\mathbf{x}_{n+1}=\mathbf{f}(\mathbf{x}_n)=\mathbf{x}_n$ for all $n$.
+\subsection{Recurrence Relations}
+\subsubsection{First-Order Difference Equations}
+A \emph{recurrence relation} can be defined by a difference equation of the form
+\begin{equation}{\label{eq:fodels}}
+	x_{n+1}=f(x_n)
+\end{equation}
+where $x_{n+1}$ is derived from $x_n$ and $n=0, 1, 2, 3,\ldots$\\
+If one starts with an initial value, say, $x_0$, then iteration of Equation (\ref{eq:fodels}) leads to a sequence of the form
+\begin{equation}
+	\{x_i:i=0\ to\ \infty\}=\{x_0,x_1,x_2,\ldots x_n,x_{n+1}\ldots\}
+\end{equation}
+\begin{theorem}
+	The general solution of the first-order linear difference equation
+	\begin{equation}
+		x_{n+1}=mx_n+c,\ n=0,1,2,3,\ldots,
+	\end{equation}
+	is given by
+	\begin{equation}
+		x_n=m^nx_0+
+		\begin{cases}
+			\dfrac{m^n-1}{m-1}c& \text{if}\ m\neq1\\
+			nc& \text{if}\ m=1
+		\end{cases}
+	\end{equation}
+\end{theorem}
+\subsubsection{Second-Order Linear Difference Equations}
+Recurrence relations involving terms whose suffices differ by two are known as \emph{second-order linear difference equations}.
+The general form of these equations with constant coefficients is
+\begin{equation}{\label{eq:sodels}}
+	ax_{n+2}=bx_{n+1}+cx_n
+\end{equation}
+\begin{theorem}
+	The general solution of the second-order recurrence relation (\ref{eq:sodels}) is
+	\begin{equation}
+		x_n=
+		\begin{cases}
+			k_1\lambda_1^n+k_2\lambda_2^n& \text{if}\ \lambda_1\neq\lambda_2\\
+			(k_3+nk_4)\lambda^n& \text{if}\ \lambda_1=\lambda_2=\lambda\ (\text{say})
+		\end{cases}\quad\text{where}\quad a\lambda^2-b\lambda-c=0
+	\end{equation}
+	Note that when $\lambda_1\ and\ \lambda_2$ are complex, the general solution can be expressed as
+	\begin{equation}
+		x_n=k_1\lambda_1^n+k_2\lambda_2^n=k_1(re^{i\theta})^n+k_2(re^{-i\theta})^n=r^n(A\cos(n\theta)+B\sin(n\theta))
+	\end{equation}
+	where $A$ and $B$ are constants.
+	When the roots are complex, the solution oscillates and is real.
+\end{theorem}
