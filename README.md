@@ -4,7 +4,7 @@ Nonlinear Dynamics
 This repository contains my report on **Nonlinear Dynamics** and its
 corresponding files for *Summer of Science* conducted by *Maths and Physics Club
 IIT Bombay*.
-
+![](Thumbnail.png)
 Introduction
 ------------
 
