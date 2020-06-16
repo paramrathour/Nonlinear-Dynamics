@@ -10,7 +10,7 @@ conducted by [Maths and Physics Club IIT Bombay](http://mnp-club.github.io/).
 Introduction
 ------------
 
-**Nonlinear Dynamics** and **Chaos **is a blend of applied mathematics and
+**Nonlinear Dynamics** and **Chaos** is a blend of applied mathematics and
 physical modelling, spreading across scientific disciplines like a spider's
 intricate web. It has provided new theoretical and conceptual tools that allow
 us to capture, understand, and link together the surprisingly complex behaviours
